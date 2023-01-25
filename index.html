@@ -33,27 +33,42 @@
 <body>
 
   <nav class="nav">
+    
     <div class="logo">
       <img src="./images/logo.svg" alt="insure logo">
     </div>
-    <ul class="navbar">
+    <ul id="navbar" class="navbar">
+      
       <li class="navbar__item"><a class="link" href="#">How we work</a> </li>
       <li class="navbar__item"><a class="link" href="#">Blog</a> </li>
       <li class="navbar__item"><a class="link" href="#">Account</a> </li>
-      <li class="navbar__item"><a class="btn btn--cta" href="#">View plans</a></li>
+      <li class="navbar__item"><a class="btn btn--cta btn--view" href="#">View plans</a></li>
+      <div class="decoration decoration--nav">
+        <img src="./images/bg-pattern-mobile-nav.svg" alt="">
+      </div>
     </ul>
-    <div class="menu-icon">
+    <div id="menu-btn" class="btn--menu">
       <img src="./images/icon-hamburger.svg" alt="open navigation">
     </div>
   </nav>
 
   <header class="hero">
+    <div class="decoration decoration--left">
+      <picture class="image">
+        <img src="./images/bg-pattern-intro-left-desktop.svg" alt="">
+        <source media="(max-width:600px )" srcset="./images/bg-pattern-intro-left-mobile.svg">
+      </picture>
+    </div>
+    <div class="decoration decoration--right">
+      <picture class="image">
+        <img src="./images/bg-pattern-intro-right-desktop.svg" alt="">
+        <source media="(max-width:600px )" srcset="./images/bg-pattern-intro-right-mobile.svg">
+      </picture>
+    </div>
     <div class="hero__image">
       <picture>
         <source media="(max-width:900px)" srcset="./images/image-intro-mobile.jpg">
         <img src="./images/image-intro-desktop.jpg" alt="">
-
-
       </picture>
     </div>
     <div class="hero__info">
@@ -93,7 +108,7 @@
             </div>
             <div class="card__header__main">
               <p>
-                Our application process can be completed in minutes, not hours. Don’t get
+                Our application process can be completed in maxutes, not hours. Don’t get
                 stuck filling in tedious forms.
               </p>
             </div>
@@ -138,7 +153,18 @@
     </section>
 
     <section class="section section--more">
+     
+      
       <div class="container">
+        <div class="decoration decoration--right">
+          <picture class="image">
+            <img src="./images/bg-pattern-how-we-work-desktop.svg" alt="">
+            <source media="(max-width: 600px)" srcset="./images/bg-pattern-how-we-work-mobile.svg">
+          </picture>
+
+        </div>
+       
+        
         <header class="section__header">
           <h2 class="section__header__title">
             Find out more about how we work
@@ -154,7 +180,15 @@
   </main>
 
   <footer class="footer">
+    <div class="decoration decoration--left">
+      <picture class="image">
+        <img src="./images/bg-pattern-footer-desktop.svg" alt="">
+        <source media="(max-width: 600px)" srcset="./images/bg-pattern-footer-mobile.svg">
+      </picture>
+    </div>
+   
     <header class="footer__header">
+     
       <div class="container">
         <div class="logo">
           <img src="./images/logo.svg" alt="insure logo">
@@ -336,6 +370,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>

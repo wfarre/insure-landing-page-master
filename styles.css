@@ -28,6 +28,57 @@ body {
   }
 }
 
+.decoration {
+  position: absolute;
+  top: 0;
+  height: 32.5rem;
+  height: 100%;
+}
+.decoration--left {
+  left: 0;
+  top: 26.875rem;
+  width: 12.5rem;
+}
+@media all and (max-width: 600px) {
+  .decoration--left {
+    height: 320px;
+    top: 450px;
+    transform: translateY(-50%);
+  }
+}
+.decoration--right {
+  right: 0;
+  top: 0;
+  width: 26rem;
+}
+@media all and (max-width: 600px) {
+  .decoration--right {
+    width: 137px;
+    height: 330px;
+    top: 100%;
+    transform: translateY(-35%);
+  }
+}
+.decoration--nav {
+  top: auto;
+  bottom: 0;
+  height: fit-content;
+}
+.decoration .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+.decoration .image img, .decoration .image source {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -56,27 +107,71 @@ body {
     height: 1.25rem;
   }
 }
+.nav .navbar {
+  position: relative;
+  padding: 0;
+}
 @media all and (max-width: 840px) {
   .nav .navbar {
     display: none;
+    position: absolute;
+    width: 100%;
+    background-color: hsl(270deg, 9%, 17%);
+    height: 100vh;
+    left: 0;
+    top: 5rem;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
   }
+}
+.nav .navbar.active {
+  display: flex;
 }
 .nav .navbar__item {
   display: inline;
   margin-left: 1.875rem;
+}
+@media all and (max-width: 840px) {
+  .nav .navbar__item {
+    margin-left: 0;
+    margin-top: 40px;
+  }
 }
 .nav .navbar__item .link {
   text-decoration: none;
   color: hsl(273deg, 4%, 51%);
   text-transform: uppercase;
 }
-.nav .menu-icon {
+@media all and (max-width: 1439px) {
+  .nav .navbar__item .link {
+    color: hsl(0deg, 0%, 98%);
+  }
+}
+.nav .navbar__item .link:hover {
+  color: hsl(270deg, 9%, 17%);
+}
+.nav .btn--menu {
   display: none;
+  position: relative;
 }
 @media all and (max-width: 840px) {
-  .nav .menu-icon {
+  .nav .btn--menu {
     display: block;
   }
+}
+.nav .btn--menu:hover {
+  cursor: pointer;
+}
+.nav .btn--menu:hover:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(256deg, 26%, 20%);
+  opacity: 0.1;
 }
 
 .btn {
@@ -85,6 +180,11 @@ body {
   color: hsl(270deg, 9%, 17%);
   text-decoration: none;
   text-transform: uppercase;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: hsl(270deg, 9%, 17%);
+  color: hsl(0deg, 0%, 98%);
 }
 
 .hero {
@@ -213,6 +313,12 @@ body {
   margin-bottom: 130px;
   margin-bottom: 8.125rem;
 }
+.hero .btn:hover {
+  cursor: pointer;
+  background-color: hsl(0deg, 0%, 98%);
+  border-color: hsl(0deg, 0%, 98%);
+  color: hsl(273deg, 4%, 51%);
+}
 
 .section {
   position: relative;
@@ -270,6 +376,7 @@ body {
   }
 }
 .section--more {
+  padding-top: 0;
   margin-top: 160px;
   color: red;
 }
@@ -281,6 +388,16 @@ body {
 @media all and (max-width: 600px) {
   .section--more {
     margin-top: 140px;
+  }
+}
+.section--more .decoration {
+  right: 0;
+  height: 100%;
+}
+@media all and (max-width: 600px) {
+  .section--more .decoration {
+    transform: none;
+    top: 0;
   }
 }
 .section--more .section__header {
@@ -306,6 +423,12 @@ body {
   border-color: hsl(0deg, 0%, 98%);
   padding: 1rem 1.5rem;
 }
+.section--more .btn:hover {
+  cursor: pointer;
+  background-color: hsl(0deg, 0%, 98%);
+  border-color: hsl(0deg, 0%, 98%);
+  color: hsl(273deg, 4%, 51%);
+}
 .section--more .container {
   background-color: hsl(256deg, 26%, 20%);
   padding: 80px;
@@ -329,6 +452,7 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .card {
@@ -366,6 +490,7 @@ body {
 }
 
 .footer {
+  position: relative;
   margin-top: 150px;
   background-color: hsl(0deg, 0%, 98%);
   padding: 70px 10.375rem;
@@ -379,6 +504,12 @@ body {
     text-align: center;
   }
 }
+.footer .decoration--left {
+  top: 0;
+  height: 12.5rem;
+  width: 33.125rem;
+  display: none;
+}
 .footer .logo {
   display: relative;
   height: 1.5rem;
@@ -391,6 +522,7 @@ body {
   left: 0;
 }
 .footer__header {
+  position: relative;
   border-bottom: 1px solid hsl(273deg, 4%, 51%);
   padding-bottom: 31px;
 }
@@ -534,6 +666,11 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.btn--view {
+  color: hsl(0deg, 0%, 98%);
+  border-color: hsl(0deg, 0%, 98%);
 }
 
 /*# sourceMappingURL=styles.css.map */
