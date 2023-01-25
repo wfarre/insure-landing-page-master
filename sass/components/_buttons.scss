@@ -1,0 +1,19 @@
+.btn{
+    border: 1px solid $text-secondary;
+    padding: .625rem 1.5625rem;
+    color: $text-secondary ;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover{
+        cursor: pointer;
+        background-color: $text-secondary;
+        // border-color: $text-secondary;
+        color: $text-tertiary;
+    }
+}
+
+
+.btn--view{
+    color: $text-tertiary;
+    border-color: $text-tertiary;
+}

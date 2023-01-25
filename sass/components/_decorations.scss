@@ -1,0 +1,52 @@
+.decoration{
+    position: absolute;
+    top: 0;
+    height: 32.5rem;
+    height: 100%;
+    &--left{
+        left: 0;
+        top: 26.875rem;
+        width: 12.5rem;
+        @include mobile-only(){
+            height: 320px;
+            top: 450px;
+            transform: translateY(-50%);
+        }
+
+    }
+    &--right{
+        right: 0;
+        top: 0;
+        width: 26rem;
+        @include mobile-only(){
+            width: 137px;
+            height: 330px;
+            top: 100%;
+            transform: translateY(-35%);
+            // bottom: 0;
+        }
+    }
+    &--nav{
+        top: auto;
+        bottom: 0;
+        height: fit-content;
+    }
+
+    .image{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        // left: 0;
+        right: 0;
+
+        img,source{
+            position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        // left: 0;
+        right: 0;
+        }
+    }
+}
