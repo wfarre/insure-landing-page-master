@@ -25,10 +25,10 @@
     }
 
     .logo{
-        display: relative;
+        position: relative;
         height: 1.5rem;
         img{
-            display: absolute;
+            position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
@@ -108,7 +108,7 @@
                         // flex-direction: column;
                         width: 100%;
                         margin: auto;
-                        padding: auto;
+                        padding: 0;
                         text-align: center;
                         justify-content: center;
                         align-items: flex-end;
@@ -158,7 +158,7 @@
                     // flex-direction: column;
                     width: 100%;
                     margin: auto;
-                    padding: auto;
+                    padding: 0;
                     text-align: center;
                     justify-content: center;
                     align-items: center;
