@@ -29,7 +29,6 @@
         width: 540px;
         width: 48.7%;
         // height: 650px;
-        object-fit:contain;
         // top: 166px;
         // right: 0;
         @include tablet-only(){
@@ -38,8 +37,11 @@
         }
 
         @include mobile-only(){
-            min-height: 450px;
-            height: auto;
+            width: 100%;
+            // height: auto;
+            // min-height: 450px;
+            height: 120vw;
+
         }
         img{
         position: absolute;

@@ -31,11 +31,12 @@
         @include small-tablet-only(){
             display: none;
             position:absolute;
-            width: 100%;
+            width: 100vw;
             background-color: $text-secondary;
             height: 100vh;
+            // height: 36.1rem;
             left: 0;
-            top: 5rem;
+            top: 5.2rem;
             z-index: 1;
             // display: flex;
             flex-direction: column;
@@ -58,7 +59,7 @@
                 text-decoration: none;
                 color: $text-primary;
                 text-transform: uppercase;
-                @include small-desktop-only(){
+                @include small-tablet-only(){
                     color: $text-tertiary
                 }
                 &:hover{
@@ -75,6 +76,10 @@
             display: block;
         }
 
+        .close-menu-btn{
+            display: none;
+        }
+
         &:hover{
             cursor: pointer;
             &:after{
@@ -86,6 +91,15 @@
                 left: 0;
                 background-color: $primary-bg;
                 opacity: 0.1;
+            }
+        }
+
+        &.active{
+            .close-menu-btn{
+                display: block;
+            }
+            .open-menu-btn{
+                display: none;
             }
         }
     }

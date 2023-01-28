@@ -70,9 +70,16 @@
             right: 0;
             // height: 26.875rem;
             height: 100%;
+
+            @include tablet-only{
+                width: 50%;
+            }
             @include mobile-only(){
                 transform: none;
                 top: 0;
+                width: 137PX;
+                // width: 100%;
+                // width: auto;
             }
         }
 

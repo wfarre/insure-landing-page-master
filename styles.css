@@ -1,3 +1,23 @@
+.btn {
+  border: 1px solid hsl(270deg, 9%, 17%);
+  padding: 0.625rem 1.5625rem;
+  color: hsl(270deg, 9%, 17%);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: hsl(270deg, 9%, 17%);
+  color: hsl(0deg, 0%, 98%);
+}
+
+@media all and (max-width: 840px) {
+  .btn--view {
+    color: hsl(0deg, 0%, 98%);
+    border-color: hsl(0deg, 0%, 98%);
+  }
+}
+
 .decoration {
   position: absolute;
   top: 0;
@@ -9,11 +29,19 @@
   top: 26.875rem;
   width: 12.5rem;
 }
+@media all and (max-width: 900px) {
+  .decoration--left {
+    height: 50%;
+    bottom: 0;
+    transform: translateY(50%);
+  }
+}
 @media all and (max-width: 600px) {
   .decoration--left {
     height: 320px;
-    top: 450px;
-    transform: translateY(-50%);
+    height: 85vw;
+    top: 120vw;
+    transform: translateY(0);
   }
 }
 .decoration--right {
@@ -21,18 +49,37 @@
   top: 0;
   width: 26rem;
 }
+@media all and (max-width: 900px) {
+  .decoration--right {
+    height: 50%;
+  }
+}
 @media all and (max-width: 600px) {
   .decoration--right {
     width: 137px;
     height: 330px;
     top: 100%;
-    transform: translateY(-35%);
+    transform: translateY(-50%);
   }
 }
 .decoration--nav {
-  top: auto;
-  bottom: 0;
-  height: fit-content;
+  display: none;
+}
+@media all and (max-width: 840px) {
+  .decoration--nav {
+    display: inline;
+    top: auto;
+    bottom: 0;
+    width: 100vw;
+    height: 61.1vw;
+  }
+  .decoration--nav img, .decoration--nav source {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
 }
 .decoration .image {
   position: absolute;
@@ -85,11 +132,11 @@
   .nav .navbar {
     display: none;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     background-color: hsl(270deg, 9%, 17%);
     height: 100vh;
     left: 0;
-    top: 5rem;
+    top: 5.2rem;
     z-index: 1;
     flex-direction: column;
     align-items: center;
@@ -113,7 +160,7 @@
   color: hsl(273deg, 4%, 51%);
   text-transform: uppercase;
 }
-@media all and (max-width: 1439px) {
+@media all and (max-width: 840px) {
   .nav .navbar__item .link {
     color: hsl(0deg, 0%, 98%);
   }
@@ -130,6 +177,9 @@
     display: block;
   }
 }
+.nav .btn--menu .close-menu-btn {
+  display: none;
+}
 .nav .btn--menu:hover {
   cursor: pointer;
 }
@@ -143,23 +193,11 @@
   background-color: hsl(256deg, 26%, 20%);
   opacity: 0.1;
 }
-
-.btn {
-  border: 1px solid hsl(270deg, 9%, 17%);
-  padding: 0.625rem 1.5625rem;
-  color: hsl(270deg, 9%, 17%);
-  text-decoration: none;
-  text-transform: uppercase;
+.nav .btn--menu.active .close-menu-btn {
+  display: block;
 }
-.btn:hover {
-  cursor: pointer;
-  background-color: hsl(270deg, 9%, 17%);
-  color: hsl(0deg, 0%, 98%);
-}
-
-.btn--view {
-  color: hsl(0deg, 0%, 98%);
-  border-color: hsl(0deg, 0%, 98%);
+.nav .btn--menu.active .open-menu-btn {
+  display: none;
 }
 
 .hero {
@@ -191,7 +229,6 @@
   position: relative;
   width: 540px;
   width: 48.7%;
-  object-fit: contain;
 }
 @media all and (max-width: 900px) {
   .hero__image {
@@ -201,8 +238,8 @@
 }
 @media all and (max-width: 600px) {
   .hero__image {
-    min-height: 450px;
-    height: auto;
+    width: 100%;
+    height: 120vw;
   }
 }
 .hero__image img {
@@ -369,10 +406,16 @@
   right: 0;
   height: 100%;
 }
+@media all and (max-width: 900px) {
+  .section--more .decoration {
+    width: 50%;
+  }
+}
 @media all and (max-width: 600px) {
   .section--more .decoration {
     transform: none;
     top: 0;
+    width: 137PX;
   }
 }
 .section--more .section__header {
@@ -483,7 +526,11 @@
   top: 0;
   height: 12.5rem;
   width: 33.125rem;
-  display: none;
+}
+@media all and (max-width: 600px) {
+  .footer .decoration--left {
+    display: none;
+  }
 }
 .footer .logo {
   display: relative;
