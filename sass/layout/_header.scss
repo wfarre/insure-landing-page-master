@@ -1,21 +1,19 @@
 .hero{
-    // width: 100vw;
-    background-color: $primary-bg;
     display: flex;
     flex-direction: row-reverse;
-    color: $text-tertiary;
-    position: relative;
-    padding: 105px 166px;
-    padding: 6.5625rem 10.375rem;
-    padding-bottom: 130px;
-    padding-bottom: 8.125rem;
-    // max-height: calc(600px - 166px - 124px);
     gap: 1.875rem;
+
+    position: relative;
     height: max-content;
-    // height: 600px;
+    padding-top: 6.5625rem;
+    padding-bottom: 8.125rem;
+    @extend .padding-lr;
+    color: $text-tertiary;
+    background-color: $primary-bg;
+
+
     @include tablet-only(){
         flex-direction: column;
-        // padding-top: 0;
     }
 
     @include mobile-only(){
@@ -25,12 +23,7 @@
     }
     &__image{
         position: relative;
-
-        width: 540px;
         width: 48.7%;
-        // height: 650px;
-        // top: 166px;
-        // right: 0;
         @include tablet-only(){
             width: 100%;
             height: 500px ;
@@ -38,25 +31,14 @@
 
         @include mobile-only(){
             width: 100%;
-            // height: auto;
-            // min-height: 450px;
             height: 120vw;
-
         }
         img{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        // width: 540px;
-        height: 650px;
-        width: 33.75rem;
-        height: 40.625rem;
+            @include image-mixin(33.75rem, 40.625rem);
         object-fit:contain;
-        top: 0;
         right: 0;
         @include tablet-only(){
-            width: 100%;
-            height: 100%;
+            @include image-mixin;
         }
 
         @include mobile-only(){
@@ -70,8 +52,6 @@
         width: 49%;
         padding-top: 70px ;
         padding-top: 4.375rem;
-        // height: fit-content;
-        // margin-bottom: 130px;
         @include tablet-only(){
             width: 100%;
         }
@@ -119,25 +99,5 @@
 
     }
 
-    .btn{
-        color: $text-tertiary;
-        border-color: $text-tertiary;
-        margin-bottom: 130px ;
-        margin-bottom: 8.125rem;
-        &:hover{
-            cursor: pointer;
-            background-color: $text-tertiary;
-            border-color: $text-tertiary;
-            color: $text-primary
-        }
-    }
-  
-    // &::after{
-    //     position: absolute;
-    //     bottom: 0;
-    //     left:0;
-    //     height: 100px;
-    //     width: 100px;
-    //     background-image: url("/images/bg-pattern-footer-desktop.svg");
-    //     }
+    
 }

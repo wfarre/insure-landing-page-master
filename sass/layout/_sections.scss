@@ -1,12 +1,10 @@
 .section{
     position: relative;
     margin-top: 300px;
-    padding: 0 166px;
-    padding: 0 10.375rem;
+    @extend .padding-lr;
     padding-top: 70px;
 
     @include mobile-only(){
-        padding: 0 2.5rem;
         margin-top: 8.75rem;
         padding-top: 3.125rem;
         text-align: center;
@@ -95,20 +93,6 @@
                         font-size:  1.75rem;
                     }
                 }
-            }
-        }
-
-        .btn{
-            color: $text-tertiary;
-            border-color: $text-tertiary;
-            padding: 1rem 1.5rem;
-            z-index: 300;
-            position: relative;
-            &:hover{
-                cursor: pointer;
-                background-color: $text-tertiary;
-                border-color: $text-tertiary;
-                color: $text-primary
             }
         }
 

@@ -2,24 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 166px;
-    padding: 1.875rem 10.375rem;
-
-    @include mobile-only(){
-        padding: 2.5rem;
-    }
-
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    @extend .padding-lr;
 
     .logo{
         position: relative;
         height: 1.25rem;
         min-width: 6.875rem;
         img{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+           @include image-mixin;
         }
         @include mobile-only(){
             height: 1.25rem;
@@ -35,11 +27,9 @@
             width: 100vw;
             background-color: $text-secondary;
             height: 100vh;
-            // height: 36.1rem;
             left: 0;
             top: 5.2rem;
             z-index: 1;
-            // display: flex;
             flex-direction: column;
             align-items: center;
         }
@@ -70,38 +60,5 @@
         }
     }
 
-    .btn--menu{
-        display: none;
-        position: relative;
-        @include small-tablet-only(){
-            display: block;
-        }
-
-        .close-menu-btn{
-            display: none;
-        }
-
-        &:hover{
-            cursor: pointer;
-            &:after{
-                content:" ";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background-color: $primary-bg;
-                opacity: 0.1;
-            }
-        }
-
-        &.active{
-            .close-menu-btn{
-                display: block;
-            }
-            .open-menu-btn{
-                display: none;
-            }
-        }
-    }
+    
 }

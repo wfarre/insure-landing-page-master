@@ -1,14 +1,16 @@
 .footer {
     position: relative;
-    padding: 70px 10.375rem;
+    @extend .padding-lr;
+    padding-top: 70px;
+    padding-bottom: 70px;
     margin-top: 150px;
     background-color: $text-tertiary;
     text-transform: uppercase;
 
     @include mobile-only() {
         margin-top: 140px;
-        padding: 90px 2.5rem;
-        // padding-top: 90px;
+        padding-top: 90px;
+        padding-bottom: 90px;
         text-align: center;
     }
 
@@ -69,54 +71,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-
-
-
-        .container--sns {
-
-            flex-direction: row;
-            gap: 1rem;
-            margin: 0;
-            padding: 0;
-
-            .sns {
-                &__item {
-                    position: relative;
-                    display: inline;
-                    height: 24px;
-                    width: 24px;
-                    &__link{
-                        color: red;
-                        img {
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            fill: $text-primary;
-                        }
-                        .sns-icon{
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            fill: $text-primary;
-                        }
-
-                    }
-
-                    &:hover{
-                        img{
-                            color: $primary-bg;
-                        }
-                        .sns-icon{
-                            fill: $text-secondary;
-                        }
-                    }
-                }
-            }
         }
     }
 

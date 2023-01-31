@@ -1,6 +1,25 @@
-
 @import "./base/fonts";
 @import "./utils/breakpoints";
+
+.padding-lr{
+    padding-left: 10.375rem;
+    padding-right: 10.375rem;
+    @include mobile-only{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+
+@mixin image-mixin($width:100%, $height:100%){
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: 0;
+    left: 0;
+}
+
+
 @import "./components/buttons";
 @import "./components/decorations";
 @import "./layout/navbar";
