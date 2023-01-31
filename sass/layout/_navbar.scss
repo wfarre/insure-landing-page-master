@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1.875rem;
-    padding-bottom: 1.875rem;
+    padding-top: calc(1.875rem/2);
+    padding-bottom: calc(1.875rem/2);
     @extend .padding-lr;
 
     .logo{
