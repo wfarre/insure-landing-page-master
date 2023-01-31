@@ -13,13 +13,8 @@
             transform: translateY(50%);
         }
 
-
-
         @include mobile-only(){
-            height: 320px;
             height: 85vw;
-            // top: 450px;
-            // top:0;
             top: 120vw;
             transform: translateY(0);
         }
@@ -31,9 +26,6 @@
         width: 26rem;
         @include tablet-only{
             height: 50%;
-            // width: 13rem;
-            // bottom: 0;
-            // transform: translateY(50%);
         }
         @include mobile-only(){
             width: 137px;
@@ -50,20 +42,20 @@
             display: inline;
             top: auto;
             bottom: 0;
-            // width: 100vw;
             width: 100vw;
             height: 61.1vw;
-            // height: fit-content;
 
             img,source{
                 position: absolute;
                 height: 100%;
                 width: 100%;
                 top: 0;
-                // left: 0;
                 right: 0;
                 }
         }
+
+        z-index: 5;
+
        
     }
 
@@ -72,7 +64,6 @@
         height: 100%;
         width: 100%;
         top: 0;
-        // left: 0;
         right: 0;
 
         img,source{
@@ -80,7 +71,6 @@
         height: 100%;
         width: 100%;
         top: 0;
-        // left: 0;
         right: 0;
         }
     }

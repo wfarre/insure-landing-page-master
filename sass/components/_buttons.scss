@@ -4,19 +4,30 @@
     color: $text-secondary ;
     text-decoration: none;
     text-transform: uppercase;
+    z-index: 10;
     &:hover{
         cursor: pointer;
         background-color: $text-secondary;
         // border-color: $text-secondary;
         color: $text-tertiary;
     }
-}
-
-
-.btn--view{
-    @include small-tablet-only{
-        color: $text-tertiary;
-        border-color: $text-tertiary;
+    &--view{
+        @include small-tablet-only{
+            color: $text-tertiary;
+            border-color: $text-tertiary;
+        }
     }
-    
+
+    // &--cta{
+    //     color: $text-tertiary;
+    //     border-color: $text-tertiary;
+    //     padding: 1rem 1.5rem;
+    //     z-index:900;
+    //         &:hover{
+    //             cursor: pointer;
+    //             background-color: $text-tertiary;
+    //             border-color: $text-tertiary;
+    //             color: $text-primary
+    //         }
+    // }
 }
